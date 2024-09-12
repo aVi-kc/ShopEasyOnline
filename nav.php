@@ -17,7 +17,7 @@
     <ul class="dropdown-content">
         <li><a href="product.php">All Categories</a></li>
         <li class="dropdown-sub">
-            <a href="#">Subcategories &#9656;</a>
+            <a href="#">categories &#9656;</a>
             <ul class="dropdown-sub-content">
                 <li><a ref="product.php">Jeans</a></li>
                 <li><a href="product.php">Shirts</a></li>
@@ -25,7 +25,7 @@
         </li>
     </ul>
 </li>
-a href="#">Search</a></li>
+<a href="#">Search</a></li>
         <li><a href="cart.php">Cart</a></li>
         <li><a href="login.php">Login</a></li>
         <li><a href="register.php">Register</a></li>
