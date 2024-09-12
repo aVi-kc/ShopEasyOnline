@@ -19,7 +19,7 @@
         <li class="dropdown-sub">
             <a href="#">Subcategories &#9656;</a>
             <ul class="dropdown-sub-content">
-                <li><a href="product.php">Jeans</a></li>
+                <li><a ref="product.php">Jeans</a></li>
                 <li><a href="product.php">Shirts</a></li>
             </ul>
         </li>
