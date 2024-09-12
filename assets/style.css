@@ -147,6 +147,60 @@ body {
     }
 }
 
+
+/* Basic Table Styles */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    margin: 1rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid palevioletred;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none; /* Hide table headers on small screens */
+    }
+
+    td {
+        padding-left: 50%;
+        position: relative;
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(data-label); /* Display header name using data-label */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #333;

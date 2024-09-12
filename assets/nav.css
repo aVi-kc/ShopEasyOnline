@@ -14,6 +14,8 @@ nav {
     position: relative;
 }
 
+
+
 .logo img {
     height: 50px;
 }
@@ -42,6 +44,8 @@ nav {
     background-color: aquamarine;
 }
 
+
+
 /* Dropdown styling */
 .dropdown-content, .dropdown-sub-content {
     display: none;
@@ -49,6 +53,8 @@ nav {
     background-color: #333;
     min-width: 160px;
     z-index: 1;
+    top:100%;
+    left: 0;
 }
 
 .dropdown-content a, .dropdown-sub-content a {
@@ -58,6 +64,12 @@ nav {
 .dropdown:hover .dropdown-content, .dropdown-sub:hover .dropdown-sub-content {
     display: block;
 }
+
+
+
+
+
+
 
 /* Mobile hamburger menu */
 .hamburger {
@@ -143,3 +155,102 @@ nav {
         padding: 0.75rem;
     }
 }
+
+.cart-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 20px;
+}
+
+.cart-icon img {
+    width: 30px; 
+    height: auto;
+}
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.search-container {
+    float: right; 
+    margin-right: 16px; 
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 4px;
+    background-color: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #ccc;
+}
+
+.user-account {
+    float: right;
+    margin-right: 16px;
+    position: relative;
+}
+
+.user-account .user-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.account-dropdown li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.account-dropdown li a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-account:hover .account-dropdown {
+    display: block;
+}
+
