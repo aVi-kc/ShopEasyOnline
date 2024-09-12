@@ -1,28 +1,29 @@
 <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                                <!-- Products dropdown menu -->
-                <li class="dropdown">
-                    <a href="#">Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Seasonal</a></li>
-                        <li><a href="#">Promotional</a></li>
-                        <li class="dropdown-sub">
-                            <a href="#">Category</a>
-                            <ul class="dropdown-content-sub">
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Shirts</a></li>
-                            </ul>
-                        </li>
+    <div class="logo">
+        <a href="index.php">ShopEasy</a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <ul class="nav-links">
+        <li><a href="index.php">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Products &#9662;</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Promotional</a></li>
+                <li class="dropdown-sub">
+                    <a href="#">Category &#9656;</a>
+                    <ul class="dropdown-sub-content">
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Shirts</a></li>
                     </ul>
                 </li>
-                <li>
-                    <form action="#" method="GET" class="search-form">
-                        <input type="text" name="query" placeholder="Search products..." aria-label="Search">
-                        <button type="submit">Search</button>
-                    </form>
-                </li>
-                <li><a href="#">Login/Signup</a></li>
-                <li><a href="#">Cart</a></li>
             </ul>
-        </nav>
+        </li>
+        <li><a href="#">Search</a></li>
+        <li><a href="login.php">Login/Signup</a></li>
+        <li><a href="cart.php">Cart</a></li>
+    </ul>
+</nav>
