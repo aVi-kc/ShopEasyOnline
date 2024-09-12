@@ -1,0 +1,70 @@
+/* Basic reset for styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full-screen height */
+}
+
+/* Container styling for the register form */
+.register-container {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+  width: 100%;
+  max-width: 400px; /* Limit width */
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for text inputs and email input */
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+  width: 100%; /* Full width of the form */
+  padding: 12px;
+  margin: 10px 0; /* Space between elements */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the element’s total width */
+}
+
+/* Styling for the submit button */
+.register-container input[type="submit"] {
+  width: 100%; /* Full width of the form */
+  padding: 12px;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Larger text size */
+}
+
+.register-container input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 15px; /* Less padding for smaller screens */
+  }
+
+  .register-container input[type="submit"] {
+    font-size: 14px; /* Smaller font for the button on smaller screens */
+  }
+}
