@@ -11,6 +11,7 @@ body {
     background-color: #f4f4f4;
     padding: 0;
     margin: 0;
+    color: #333;
 }
 
 /* General Reset */
@@ -18,49 +19,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* color: aquamarine; */
+    /* color: antiquewhite; */
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #333;
-    padding: 10px 20px;
-    position: relative;
-}
-
-.logo {
-    display: inline-block;
-}
-
-.logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-/* Main Navigation Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-}
-
-.nav-links li {
-    margin-left: 
-}
-
+/* Nav CSS */
 
 
 
