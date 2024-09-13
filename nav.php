@@ -25,7 +25,7 @@
         </li>
     </ul>
 </li>
-a href="#">Search</a></li>
+<a href="#">Search</a></li>
         <li><a href="cart.php">Cart</a></li>
         <li><a href="login.php">Login</a></li>
         <li><a href="register.php">Register</a></li>
