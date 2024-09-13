@@ -35,11 +35,23 @@
     include "testimonial.php";
 ?>
 
+<?php
+
+include "about.php";
+
+?>
+
+<?php
+
+include "contact.php";
+?>
+
     <!-- Footer -->
 <?php
 
     include "footer.php";
 ?>
+
 
 </body>
 </html>

@@ -1,3 +1,14 @@
+/* styles.css */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -23,44 +34,6 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* .container {
-  padding: 16px;
-} */
-
-span.psw {
-  float: right;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
-/* new css */
-.mainBody {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.customheight {
-  height: auto !important;
-}
-
 .container {
   width: 100%;
   max-width: 650px;
@@ -70,25 +43,46 @@ span.psw {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  padding: 2% 10%;
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
 }
 
-.input-group {
+.form-group {
   margin-bottom: 15px;
 }
 
-.input-group label {
+.form-group label {
+  display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.input-group input {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="text"] {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 .btn-submit {
@@ -99,20 +93,15 @@ span.psw {
   border-radius: 4px;
   cursor: pointer;
 }
-.btn-danger {
-  padding: 10px;
-  background-color: #df0909;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.btn-submit:hover,
-.btn-danger:hover {
+.btn-submit:hover {
   opacity: 0.8;
 }
 
-.remember-me {
-  margin-top: 10px;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: white;
 }
