@@ -5,6 +5,15 @@
             <h2>Register</h2>
             <p>Please fill in this form to create an account.</p>
     <hr>
+             <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
             
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -35,6 +44,6 @@
             <button type="submit" class="btn-submit">Register</button>
             </div>
         </form>
-    <p>Already have an account? <a href="login.php">Sign in</a>.</p>
+    <p>Already have an account?<a href="login.php">Sign in</a>.</p>
     </div>
 </body>
