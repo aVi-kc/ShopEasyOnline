@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/register.css">
+<link rel="stylesheet" href="./assets/css/register.css">
 <body>
     <div class="container">
         <form id="registrationForm">

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/login.css">
+<link rel="stylesheet" href="./assets/css/login.css">
 <div class="mainBody">
 <div class="container">
         <form class="login-form" id="resetPassword">
