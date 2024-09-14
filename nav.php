@@ -19,14 +19,7 @@
             <li><a href="./product.php">Shirts</a></li>
         </ul>
         </li>
-<<<<<<< HEAD
-    </ul>
-</li>
-<a href="#">Search</a></li>
-        <li><a href="cart.php">Cart</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="register.php">Register</a></li>
-=======
+
         <li><a href="#contact">Contact</a> </li>
         <li><a href="#about">About US</a></li>
 
@@ -51,9 +44,7 @@
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
         </ul>
-    </div>
->>>>>>> 0d23f490fbd9fdefc054d338b771fcb3b860fe62
-        
+    </div>        
     </ul>
 </nav>
 <script>
