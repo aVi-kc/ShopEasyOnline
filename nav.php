@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="./assets/nav.css">
+<link rel="stylesheet" href="./assets/css/nav.css">
 
 <nav>
     <div class="logo">

@@ -1,6 +1,8 @@
-<section id="about">
-            <h1>About Us</h1>
-            <p>We are Dance Fusion Studio</p>
-            <p>Dance Studio is where passion meets precision. We provide top-notch dance education in a vibrant and supportive environment. Our mission is to help dancers of all levels improve their technique and enjoy the art of dance.</p>
-            <p>Founded in 2024, Dance Studio has quickly become a hub for dancers in the community. Whether you're a beginner or an experienced dancer, we have something for you.</p>
+<section id="about" class="container">
+    <div class="about-content">
+        <h1>About Us</h1>
+        <p>We are E-commerce</p>
+        <p>E-commerce is where passion meets precision. We provide top-notch service and support for a seamless shopping experience. Our mission is to offer a wide range of products that suit every need.</p>
+        <p>Founded in 2024, ShopEasy Online has quickly become a trusted platform for online shoppers. Whether you're a new or returning customer, we have something for you.</p>
+    </div>
 </section>
