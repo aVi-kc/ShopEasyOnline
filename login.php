@@ -15,7 +15,7 @@
                 <input type="password" id="password" placeholder="Enter Password" required>
             </div>
             <button type="submit" class="btn-submit">Login</button>
-            <button type="button" class="btn-danger">Cancel</button>
+            <button type="button" class="btn-danger" form action="index.php">Cancel</button>
             <div class="remember-me">
                <label>
                     <input type="checkbox"> Remember me
