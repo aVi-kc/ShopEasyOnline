@@ -22,7 +22,7 @@
 
     <!-- Category Section -->
 <?php
-    include "product.php";
+    include "category.php";
 ?>
 
     <!-- Product Slideshow Section -->

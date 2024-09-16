@@ -1,5 +1,8 @@
+
+<?php
+include "nav.php";
+?>
 <link rel="stylesheet" href="./assets/css/register.css">
-<body>
     <div class="container">
         <form id="registrationForm">
             <h2>Register</h2>
@@ -46,4 +49,8 @@
         </form>
     <p>Already have an account?<a href="login.php">Sign in</a>.</p>
     </div>
-</body>
+
+
+<?php
+include "footer.php";
+?>

@@ -1,3 +1,6 @@
+<?php
+include "nav.php";
+?>
 <link rel="stylesheet" href="./assets/css/login.css">
 <div class="mainBody">
 <div class="container">
@@ -22,3 +25,6 @@
     </div>
 </div>
 <script src="./assets/script.js"></script>
+<?php
+include "footer.php";
+?>

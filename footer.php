@@ -8,9 +8,9 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About Us</a></li>
-                    <li><a href="#contact.php">Contact</a></li>
+                    <li><a href="#index.php">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -28,21 +28,6 @@
                             alt="LinkedIn"></a>
                 </div>
             </div>
-
-            <!-- Contact Information
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>123 Market St, NSW, 2000</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: contact@shopeasy.com.au</p>
-                <form action="#">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>-->
-
             <!-- Payment Methods -->
             <div class="footer-section">
                 <h4>We Accept</h4>

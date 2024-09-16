@@ -23,28 +23,33 @@
         <li><a href="#contact">Contact</a> </li>
         <li><a href="#about">About US</a></li>
 
+            <!-- User Account Icon -->
+    <div class="user-cart-wrapper">
+        <div class="user-account">
+            <a href="#" class="user-icon">
+                <img src="./image/user.png" alt="User Account">
+            </a>
+            <ul class="account-dropdown">
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+            </ul>
+        </div>
+
+        <!-- Cart Icon -->
         <div class="cart-icon">
-    <a href="./cart.php">
-        <img src="./image/cart/shopping-cart.png" alt="Cart">
-        <span class="cart-count">3</span>
-    </a>
-</div>
+            <a href="./cart.php">
+                <img src="./image/cart/shopping-cart.png" alt="Cart">
+                
+            </a>
+        </div>
+    </div>
+
         <div class="search-container">
         <form action="/search" method="GET">
             <input type="text" placeholder="Search" name="search">
             <button type="submit">Search</button>
         </form>
     </div>
-    <!-- User Account Icon -->
-    <div class="user-account">
-        <a href="#" class="user-icon">
-            <img src="./image/user.png" alt="User Account">
-        </a>
-        <ul class="account-dropdown">
-            <li><a href="login.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
-        </ul>
-    </div>        
     </ul>
 </nav>
 <script>
