@@ -1,14 +1,9 @@
 
 <link rel="stylesheet" href="./assets/css/nav.css">
-
 <nav>
     <div class="logo">
         <img src="./image/logo 1.jpg" alt="ShopEasyOnline">
     </div>
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
-
     <ul class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="./product.php">All Products</a></li>
@@ -39,7 +34,7 @@
         <div class="cart-icon">
             <a href="./cart.php">
                 <img src="./image/cart/shopping-cart.png" alt="Cart">
-                
+                <span class="cart-count">0</span>
             </a>
         </div>
     </div>
@@ -51,6 +46,8 @@
         </form>
     </div>
     </ul>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
 </nav>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -58,27 +55,22 @@
     const navLinks = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
 
-    // Function to handle resizing
     function handleResize() {
         if (window.innerWidth > 768) {
-            // Ensure menu is visible on larger screens
             navLinks.style.display = 'flex';
-            menuToggle.checked = false; // Ensure checkbox is unchecked
+            menuToggle.checked = false;
         } else {
-            // Ensure menu is hidden on smaller screens
             navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
         }
     }
 
-    // Event listener for menu toggle
     menuToggle.addEventListener('change', function () {
         navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
     });
 
-    // Event listeners for dropdown menus
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener('click', function (e) {
-            e.stopPropagation(); // Prevent event from bubbling up
+            e.stopPropagation();
             const dropdownContent = this.querySelector('.dropdown-content');
             if (dropdownContent) {
                 dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
@@ -86,18 +78,52 @@
         });
     });
 
-    // Close dropdowns when clicking outside
     document.addEventListener('click', function () {
         document.querySelectorAll('.dropdown-content').forEach(content => {
             content.style.display = 'none';
         });
     });
 
-    // Initial check
     handleResize();
-
-    // Add event listener for window resize
     window.addEventListener('resize', handleResize);
+
+    function updateCartCount() {
+        const cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
+        const cartCountElement = document.querySelector('.cart-count');
+        console.log('Cart Items:', cartItems); // Debugging log
+        console.log('Cart Items Length:', cartItems.length); // Debugging log
+        cartCountElement.textContent = cartItems.length;
+        cartCountElement.style.display = cartItems.length > 0 ? 'inline-block' : 'none';
+    }
+
+    function handleAddToCartClick(event) {
+        console.log('Add to Cart button clicked'); // Debugging log
+        const productItem = event.target.closest('.product');
+        if (!productItem) return;
+
+        const productName = productItem.querySelector('h3').textContent;
+        const productPrice = productItem.querySelector('.price').textContent;
+        const productImage = productItem.querySelector('img').src;
+
+        let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
+        cartItems.push({
+            name: productName,
+            price: productPrice,
+            image: productImage
+        });
+
+        sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartCount(); // Update cart count
+        alert(`${productName} has been added to your cart.`);
+    }
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.removeEventListener('click', handleAddToCartClick); // Remove existing listeners
+        button.addEventListener('click', handleAddToCartClick);
+    });
+
+    updateCartCount(); // Ensure the cart count is updated on page load
 });
 
 </script>

@@ -1,71 +1,101 @@
 <?php
 include "nav.php";
 ?>
-<link rel="stylesheet" href="./assets/css/cart.css">
+<style>
+        /* Basic styling for the cart */
+        .cart-items {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .cart-items h2 {
+            margin-bottom: 20px;
+        }
+        .cart-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .cart-item img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .cart-item .product-name {
+            font-size: 1.2rem;
+        }
+        .cart-item .product-price {
+            color: green;
+        }
+        .cart-item .remove-item {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .cart-item .remove-item:hover {
+            background-color: darkred;
+        }
+    </style>
 <div class="header-container">
-           <!-- <div class="cart-icon">
-                <a href="cart.php">
-                    <img src="image/cart/shopping-cart.png" alt="Cart">
-                    <span class="cart-count">3</span>
-                </a>
-            </div>-->
-        </div>
-    </header>
-    <!-- Cart Section -->
+
     <section class="cart">
         <div class="container">
             <h1>Your Shopping Cart</h1>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="./image/product/allProducts/electronic.jpeg" alt="Product 1" class="cart-image">
-                            <p>Headphone</p>
-                        </td>
-                        <td>$29.99</td>
-                        <td>
-                            <input type="number" value="1" min="1" class="quantity-input">
-                        </td>
-                        <td class="total">$29.99</td>
-                        <td>
-                            <button class="remove-btn">Remove</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="image/product/allProducts/boostup_clothing-category_shirts-2.jpg" alt="Product 2"
-                                class="cart-image">
-                            <p>T-shirts</p>
-                        </td>
-                        <td>$39.99</td>
-                        <td>
-                            <input type="number" value="1" min="1" class="quantity-input">
-                        </td>
-                        <td class="total">$39.99</td>
-                        <td>
-                            <button class="remove-btn">Remove</button>
-                        </td>
-                    </tr>
-                    <!-- Add more product rows as needed -->
-                </tbody>
-            </table>
-            <div class="cart-summary">
-                <p>Total Items: <span id="total-items">2</span></p>
-                <p>Total Price: <span id="total-price">$69.98</span></p>
-                <button class="checkout-btn" onclick="window.location.href='checkout.php'">Proceed to Checkout</button>
-            </div>
-        </div>
+            <div class="cart-items">
+        <div id="cart-content"></div>
+
+    </div>
+
+    
+</div>
     </section>
-    <script src="jquery/cart.js"></script>
+    <script>
+        // Retrieve cart items from sessionStorage
+        const cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
+
+        const cartContent = document.getElementById('cart-content');
+
+        // Check if cart is empty
+        if (cartItems.length > 0) {
+            cartItems.forEach((item, index) => {
+                // Create a cart item div
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <span class="product-name">${item.name}</span> - 
+                    <span class="product-price">${item.price}</span>
+                    <br>
+                    <button class="remove-item" data-index="${index}">Remove</button>
+                `;
+                cartContent.appendChild(cartItem);
+            });
+        } else {
+            cartContent.textContent = 'Your cart is empty.';
+        }
+
+        // Add event listener to remove items from cart
+        const removeButtons = document.querySelectorAll('.remove-item');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const itemIndex = event.target.getAttribute('data-index');
+                cartItems.splice(itemIndex, 1); // Remove the item from cartItems array
+                sessionStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update sessionStorage
+                location.reload(); // Reload the page to update the cart display
+            });
+        });
+
+        
+    </script>
+
+
 <?php
 include "footer.php";
 ?>
