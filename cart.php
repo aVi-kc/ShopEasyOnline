@@ -51,9 +51,7 @@ include "nav.php";
             <div class="cart-items">
         <div id="cart-content"></div>
 
-    </div>
-
-    
+    </div>   
 </div>
     </section>
     <script>

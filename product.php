@@ -1,10 +1,21 @@
+
+<link rel="stylesheet" href="./assets/css/product.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+
+<!-- Product Listing Section -->
+<header>
 <?php
 include "nav.php";
 ?>
-<link rel="stylesheet" href="./assets/css/product.css">
-
-
-<!-- Product Listing Section -->
+</header>
 <section class="container products">
     <h2>All Products</h2>
     <div class="product-list">
@@ -87,8 +98,13 @@ include "nav.php";
             });
         });
     </script>
-
-
+    
+</body>
+<footer>
 <?php
 include "footer.php";
 ?>
+</footer>
+</html>
+
+

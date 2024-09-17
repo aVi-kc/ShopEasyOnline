@@ -1,107 +1,63 @@
-/* styles.css */
-
+/* General styling for the body to ensure everything is properly aligned */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  position: center;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-button {
-  background-color: #04aa6d;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
+/* Container for the form */
 .container {
-  width: 100%;
-  max-width: 650px;
+  max-width: 600px; /* Center the form and limit its width */
+  margin: 100px auto; /* Adds space from the top and centers horizontally */
   padding: 20px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 25px;
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column; /* Make inputs stack vertically */
 }
 
+/* Spacing between form fields */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
+/* Label and input styles */
+label {
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group input[type="tel"],
-.form-group input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.form-group input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.form-group input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-.btn-submit {
+input {
   padding: 10px;
-  background-color: #04aa6d;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make the input take full width */
+}
+
+/* Button styling */
+.btn-submit {
+  padding: 10px 15px;
+  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .btn-submit:hover {
-  opacity: 0.8;
+  background-color: #218838;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: black;
+/* Style for the "Already have an account" part */
+p {
+  margin-top: 20px;
+  text-align: center;
 }

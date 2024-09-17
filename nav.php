@@ -4,13 +4,15 @@
     <div class="logo">
         <img src="./image/logo 1.jpg" alt="ShopEasyOnline">
     </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
     <ul class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="./product.php">All Products</a></li>
         <li class="dropdown">
             <a href="#">Category &#9662;</a>
         <ul class="dropdown-content">
-            <li><a ref="./product.php">Jeans</a></li>
+            <li><a href="./product.php">Jeans</a></li>
             <li><a href="./product.php">Shirts</a></li>
         </ul>
         </li>
@@ -46,8 +48,7 @@
         </form>
     </div>
     </ul>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
 </nav>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
