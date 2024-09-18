@@ -19,6 +19,7 @@
 <?php
     include "herosection.php";
 ?>
+<!-- <div id="products-container"></div> -->
 
     <!-- Category Section -->
 <?php

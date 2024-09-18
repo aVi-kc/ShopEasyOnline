@@ -14,8 +14,6 @@ nav {
     position: relative;
 }
 
-
-
 .logo img {
     height: 50px;
 }
@@ -146,6 +144,11 @@ nav {
         display: flex;
     }
 }
+@media screen and (min-width: 769px) {
+    .nav-links {
+      display: flex;
+    }
+  }
 
 @media screen and (max-width: 480px) {
     .nav-links a {

@@ -21,6 +21,8 @@
         <li><a href="#about">About US</a></li>
 
             <!-- User Account Icon -->
+    <div class="nav-extra-content">
+
     <div class="user-cart-wrapper">
         <div class="user-account">
             <a href="#" class="user-icon">
@@ -40,13 +42,15 @@
             </a>
         </div>
     </div>
-
-        <div class="search-container">
-        <form action="/search" method="GET">
-            <input type="text" placeholder="Search" name="search">
-            <button type="submit">Search</button>
-        </form>
     </div>
+
+    <div class="search-container">
+    <form id="search-form" method="GET">
+        <input type="text" placeholder="Search for products" name="search" required>
+        <button type="submit">Search</button>
+    </form>
+</div>
+
     </ul>
 
 </nav>
@@ -55,19 +59,31 @@
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
+    const searchForm = document.getElementById('search-form');
+
+    // Function to handle menu toggle
+function handleMenuToggle() {
+  navLinks.classList.toggle('show');
+}
+// Add event listener to menu toggle checkbox
+menuToggle.addEventListener('change', handleMenuToggle);
 
     function handleResize() {
-        if (window.innerWidth > 768) {
-            navLinks.style.display = 'flex';
-            menuToggle.checked = false;
-        } else {
-            navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
-        }
-    }
+        if (window.innerWidth <= 768) {
+    navLinks.classList.add('show');
+  } else {
+    navLinks.classList.remove('show');
+  }
 
-    menuToggle.addEventListener('change', function () {
-        navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
-    });
+    }
+// Initialize menu toggle state
+handleResize();
+
+
+    // Add event listener to window resize
+window.addEventListener('resize', handleResize);
+
+
 
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener('click', function (e) {
@@ -85,8 +101,9 @@
         });
     });
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    // handleResize();
+    // window.addEventListener('resize', handleResize);
+
 
     function updateCartCount() {
         const cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
@@ -126,6 +143,31 @@
 
     updateCartCount(); // Ensure the cart count is updated on page load
 });
+searchForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            const searchTerm = document.querySelector('input[name="search"]').value;
+
+            fetch(`./search.php?search=${encodeURIComponent(searchTerm)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const productsContainer = document.getElementById('products-container');
+                    
+                    if (data.length === 0) {
+                        productsContainer.innerHTML = '<p>No products found.</p>';
+                    } else {
+                        productsContainer.innerHTML = data.map(product => `
+                            <div class="product">
+                                <img src="${product.image}" alt="${product.name}">
+                                <h3>${product.name}</h3>
+                                <p>$${product.price}</p>
+                                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                            </div>
+                        `).join('');
+                    }
+                })
+                .catch(error => console.error('Error fetching search results:', error));
+        });
 
 </script>
 
